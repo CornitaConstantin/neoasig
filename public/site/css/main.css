@@ -1,0 +1,943 @@
+h1 {
+	padding: 0 2rem;
+	font-size: 2.6rem;
+	text-align: center;
+	color: #707070;
+}
+
+h1 a {
+	text-decoration: none;
+}
+
+@media all and ( min-width: 480px ) {
+	h1 {
+		font-size: 3.2rem;
+	}
+}
+
+/***********************
+	Mobile App banner
+***/
+#banner {
+	display: none;
+}
+
+#banner.open {
+	display: block;
+	position: fixed;
+	top: 0;
+	height: 5rem;
+	width: 100%;
+	z-index: 45;
+}
+
+#banner ~ #primary-header {
+	transition: 0.3s;
+}
+
+#banner.open ~ #primary-header {
+	top: 5rem;
+}
+
+#banner.open ~ #primary-navigation .panel-wrapper {
+	padding-top: 5rem;
+	bottom: 0;
+}
+
+#banner.open ~ #primary-navigation .panel-wrapper.right {
+	padding-top: 14rem;
+}
+
+#banner.open ~ #wrapper {
+	padding-top: 5rem;
+}
+
+#banner_content { 
+	overflow: hidden;
+	background: #f2f0ec;
+	padding: 1rem;
+	text-align: center;
+}
+
+#banner_content a { 
+	display: inline-block;
+	cursor: pointer;
+}
+
+#banner_text { 
+	float: left;
+	color: #154995;
+	text-decoration: underline;
+}
+
+#banner_icon { 
+	display: inline-block;
+	margin-right: 1rem;
+	font-size: 30px;
+	text-align: center;	
+	vertical-align: middle;
+}
+
+#banner_icon:active { 
+	color: #154995;
+}
+
+#banner_text:hover { 
+	text-decoration: none;
+}
+
+#banner_close { 
+	float: right;
+	padding: 1rem;
+	margin: 0;
+	height: 3rem;
+	color: white;
+}
+
+#banner_close::before {
+	position: relative;
+	top: -1.6rem;
+}
+
+@media all and (max-width: 340px) {
+	#banner_text { 
+		font-size: 14px;
+	}
+}
+
+@media all and (min-width: 480px) {
+	#banner_text { 
+		float: none;
+	}
+
+	#banner.open ~ #wrapper #bookmarks {
+		top: 50%;
+	}
+}
+
+@media all and (min-width: 768px) {
+	#banner.open ~ #primary-navigation .panel-wrapper {
+		top: 11rem;
+		padding-top: 0;
+	}
+
+	#banner.open ~ #primary-navigation .panel-wrapper.right {
+		padding-top: 3rem;
+	}
+
+	#banner.open ~ #wrapper {
+		padding-top: 11rem;
+	}
+
+	#banner.open ~ #wrapper #sidebar {
+		position: absolute;
+		top: 11rem;
+	}
+
+}
+
+/***
+	End Mobile App banner
+***********************/
+
+
+/***********************
+	Utitlity classes
+***/
+.panel {
+	padding: 6rem 0;
+	overflow: hidden;
+}
+
+.circled {
+	border: .2rem solid #FFF;
+	border-radius: 50%;
+	padding: 1.6rem;
+}
+
+#sidebar .dummy-login, #sidebar #LOGIN_policyNo, #sidebar #LOGIN_password {
+	font-size: 1.2rem
+}
+
+#bookmarks {
+	display: none;
+}
+
+@media all and ( min-width: 480px ) {
+	.break {
+		display: block;
+	}
+}
+
+@media all and ( min-width: 768px ) {
+	#bookmarks {
+		display: block;
+		position: fixed;
+		right: 3rem;
+		top: 40%;
+		z-index: 1;
+	}
+
+	#bookmarks .bookmark {
+		display: block;
+		background-color: #FFFFFF;
+		border: 2px solid #FFFFFF;
+		border-radius: 14px;
+		width: 14px;
+		height: 14px;
+		cursor: pointer;
+	}
+
+	#bookmarks .bookmark.current, #bookmarks .bookmark:hover {
+		background-color: transparent;
+	}
+}
+
+#emergency_bar {
+	text-align: center;
+}
+
+#emergency_bar div {
+	width: 80%;
+	margin: 0 auto;
+	padding: .5rem 0;
+}
+
+#emergency_bar p {
+	overflow: hidden;
+	margin: 0;
+}
+
+#emergency_bar .icon {
+	float: left;
+	color: #FFFFFF;
+	font-size: 2.4rem;
+	margin-right: 1rem;
+}
+
+#emergency_bar + #homepage_panels #sidebar {
+	/*height: 59rem;*/
+}
+
+@media all and ( min-width: 768px ) {
+	#emergency_bar div {
+		position: relative;
+		left: -5rem;
+		width: 44%;
+	}
+}
+
+@media all and ( min-width: 900px ) {
+	#emergency_bar div {
+		left: 0;
+	}
+}
+/***
+	End utility classes
+***********************/
+
+/***********************
+	Main panels
+***/
+h1 .money {
+	color: #86C751;
+}
+
+h1 .time {
+	color: #5F80A4;
+}
+
+h1 .worry {
+	color: #FF6C00;
+}
+
+#primary-panel {
+	padding-bottom: 0;
+}
+
+#primary-panel form p {
+	font-size: 1.4rem;
+	margin: 3rem 0;
+}
+
+#primary-panel.quote .quote-form p {
+	white-space: nowrap;
+}
+
+#primary-panel.quote .quote-form, #primary-panel.recall .recall-form {
+	margin: 6rem 0 3rem 0;
+}
+
+#primary-panel.quote .quote-form, #primary-panel.recall .recall-form {
+	text-align: center;
+}
+
+#primary-panel.quote .quote-form .select-box {
+	margin: 0 0.5rem -1.6rem 0.5rem;
+}
+
+#primary-panel.quote .quote-form .select-box select {
+	font-size: 1.4rem;
+	padding-right: 3rem;
+}
+
+#primary-panel.quote #zip {
+	text-align: center;
+	width: 9.5rem;
+	margin: 0 1rem;
+}
+
+#primary-panel.recall .recall-form {
+	width: 30rem;
+	margin: 0 auto;
+}
+
+#primary-panel.recall .recall-form .select-box, #primary-panel.recall .recall-form .btn {
+	margin-bottom: 3rem;
+}
+
+#primary-panel.recall .recall-form .select-box {
+	display: block;
+}
+
+#primary-panel.recall .recall-form select {
+	width: 100%;
+}
+
+#primary-panel.recall .recall-form .btn {
+	float: right;
+}
+
+#primary-panel.recall .recall-form hr {
+	clear: both;
+}
+
+#primary-panel.recall .recall-form .recall-options {
+	overflow: auto;
+}
+
+#primary-panel.recall .recall-options .btn {
+	float: none;
+}
+
+#primary-panel.recall .retrieved {
+	font-size: 1.4rem;
+	margin: 0;
+}
+
+#primary-panel #recall-modal .select-box, #primary-panel #recall-modal .btn {
+	display: block;
+	width: 20rem;
+	margin: 2rem auto;
+}
+
+#recall-modal .select-box select {
+	width: 100%;
+}
+
+#primary-panel.service #LOGIN_policyNo, #primary-panel.service #LOGIN_password {
+	display: block;
+	width: 100%;
+	min-width: 24rem;
+	margin-right: 2rem;
+}
+
+#geolocation {
+	font-size: 2rem;
+	color: #707070;
+	cursor: pointer;
+}
+
+#geolocation:hover {
+	color: #CDCDCD;
+}
+
+#primary-panel .alt-link {
+	text-align: center;
+	font-size: 1.4rem;
+}
+
+.primary .small-gecko {
+	margin: 0 auto;
+	display: block;
+	width: 11rem;
+	padding-top: 1rem;
+}
+
+.primary .service .small-gecko {
+	display: none;
+}
+
+.primary .claims h3 {
+	color: #FFB209;
+}
+
+#primary-panel .policy-form h2 {
+	text-align: center;
+}
+
+#primary-panel.service #homepage_manage_policy_content .express_links {
+	display: none;
+}
+
+#primary-panel.service .select-content .btn {
+	float: right;
+	clear: both;
+}
+
+#primary-panel.service .select-content form {
+	overflow: auto;
+}
+
+#service-contents {
+	position: relative
+}
+
+#service-contents {
+	margin-top: 6rem;
+}
+
+#service-form {
+	width: 80%;
+	min-width: 24rem;
+	max-width: 48rem;
+	margin: 0 auto;
+}
+
+#service-form .select-content {
+	overflow: auto;
+	margin-bottom: 6rem;
+}
+
+
+#service-form .select-box, #service-form select {
+	width: 100%;
+}
+
+#service-links {
+	background-color: #F7F7F7;
+	overflow: auto;
+	padding: 3rem 0 2rem 0;
+	margin-top: -1.3rem;
+}
+
+#service-links h3 {
+	font-size: 2rem;
+}
+
+#service-links ul {
+	clear: both;
+	margin-left: 6.5rem;
+}
+
+#service-links ul li {
+	font-size: 1.4rem;
+}
+
+#service-links .links span {
+	float: left;
+	font-size: 3rem;
+	border-radius: 50%;
+	color: #FFF;
+	padding: 1rem;
+	margin-right: 1rem;
+}
+
+#service-links .links .express_links span {
+	background-color: #446DAA;
+}
+
+#service-links .links .claims span {
+	background-color: #FE9400;
+}
+
+#service-links .links h3 {
+	float: left;
+}
+
+#service-links .express_links, #service-links .claims {
+	width: 25rem;
+	margin: 0 auto;
+}
+
+#sidebar .extra-info {
+	overflow: auto;
+	background-color: #F7F7F7;
+	margin-top: -1.3rem;
+	padding: 3rem 0 1.5rem 0;
+}
+
+#sidebar .login-links {
+	width: 30rem;
+	margin: 0 auto;
+}
+
+#sidebar .login-links .express_links, #sidebar .login-links .claims {
+	float: left;
+	margin: 0 auto;
+}
+
+#sidebar .login-links .express_links {
+	width: 49%;
+	margin-left: 1%;
+}
+
+
+#sidebar .login-links .claims {
+	width: 45%;
+	margin-left: 5%;
+}
+
+#sidebar .login-links h3 {
+	font-size: 2rem;
+}
+
+#sidebar .login-links ul {
+	margin-left: 0;
+}
+
+#sidebar .login-links ul li {
+	list-style: none;
+	font-size: 1.4rem;
+	padding: 0;
+}
+
+@media all and ( min-width: 360px ) {
+	#service-form .select-box {
+		width: 20rem;
+	}
+
+	#service-form .select-box select {
+		padding-right: 2rem;
+	}
+
+	.primary .service .small-gecko {
+		display: block;
+		position: absolute;
+		top: -3.6rem;
+		left: 63%;
+	}
+
+	#sidebar .login-links {
+		width: 35rem;
+	}
+
+	#sidebar .login-links h3 {
+		font-size: 2.2rem;
+	}
+
+	#sidebar .login-links li {
+		font-size: 1.6rem;
+	}
+
+	#sidebar .login-links .claims {
+		width: 40%;
+		margin-left: 10%;
+	}
+}
+
+@media all and ( min-width: 480px ) {
+	#primary-panel form p {
+		font-size: 2rem;
+	}
+
+	#primary-panel.quote .quote-form .select-box {
+		margin: 0 1rem -1.6rem 1rem;
+	}
+
+	#primary-panel.quote .quote-form input, #primary-panel select {
+		font-size: 1.6rem;
+	}
+
+	#primary-panel.service .select-content .btn {
+		float: right;
+		clear: none;
+	}
+
+	#service-links .links {
+		width: 88%;
+		max-width: 48rem;
+		margin: 0 auto;
+	}
+
+	#service-links .links div {
+		float: left;
+	}
+
+	#service-links .express_links {
+		width: 49%;
+		margin-left: 1%;
+	}
+
+	#service-links .claims {
+		width: 45%;
+		margin-left: 5%;
+	}	
+}
+
+@media all and ( min-width: 768px ) {
+	#primary-panel {
+		height: 42rem;
+		padding-bottom: 6rem;
+	}
+
+	#primary-panel.service {
+		height: 100%;
+
+	}
+
+	#primary-panel .main-area {
+		position: relative;
+		z-index: 0;
+		margin-left: -12rem;
+	}
+
+	#service-contents {
+		max-width: 80rem;
+		margin: 0 auto;
+	}
+
+	#service-form, #service-links {
+		float: left;
+		clear: none;
+		padding: 0 2rem;
+		margin: 3rem 0 0 0;
+	}
+
+	#service-form {
+		width: 55%;
+	}
+
+	#service-links {
+		width: 45%;
+		overflow: hidden;
+		background-color: transparent;
+		padding-left: 6rem;
+	}
+
+	#service-links .links div {
+		width: 100%;
+		margin-left: 0;
+	}
+	
+	#service-links .express_links {
+		min-width: 18rem;
+	}
+
+
+	#primary-panel .quick-links-bg {
+		padding: 6rem 0;
+	}
+
+	.primary .small-gecko {
+		display: none;
+	}
+
+	.primary .service .small-gecko {
+		top: -.6rem;
+		left: 38%;
+	}
+
+	#primary-panel .gecko.large_only {
+		position: absolute;
+		top: 10rem;
+		left: 15%;
+		width: 13rem;
+	}
+
+	#sidebar {
+		position: absolute;
+		top: 6rem;
+		right: 0;
+		z-index: 1;
+		width: 25rem;
+		height: 61rem;
+		background-color: #F7F7F7;
+		padding: 2rem;
+	}
+
+	#sidebar .select-content p {
+		font-size: 1.4rem;
+		margin-bottom: 1rem;
+	}
+
+	#sidebar .select-box, #sidebar input {
+		background-color: #FFF;
+	}
+
+	#sidebar .actions {
+		overflow: hidden;
+	}
+
+	#sidebar input, #sidebar button {
+		width: 100%;
+	}
+
+	#sidebar .login-links {
+		width: 100%;
+		padding-top: 0;
+	}
+
+	#sidebar .extra-info {
+		overflow: hidden;
+		margin-top: 0;
+		padding: 0;
+	}
+
+	#sidebar .login-links .express_links, #sidebar .login-links .claims {
+		width: 100%;
+		margin-left: 0;
+	}
+}
+
+@media all and ( min-width: 900px ) {
+	#primary-panel .gecko.large_only {
+		position: absolute;
+		top: 2rem;
+		left: 8%;
+		width: 20rem;
+	}
+
+	#primary-panel .main-area {
+		margin-left: auto;
+	}
+}
+/***
+	End main panels
+***********************/
+
+/***********************
+	Promotional panels
+***/
+.promotional-panel .headline {
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+	padding-bottom: 2rem;
+	border-bottom: .2rem solid #FFF;
+}
+
+.promotional-panel .headline h2 {
+	width: 65%;
+}
+
+.promotional-panel .headline .icon {
+	position: absolute;
+		top: 0;
+		right: 0;
+		color: #FFFFFF;
+		font-size: 3.2rem;
+}
+
+.promotional-panel .intro {
+	text-align: center;
+	font-size: 2rem;
+	margin: 3rem;
+}
+
+.promotional-panel .btn, .promotional-panel .btn:active {
+	display: block;
+	width: 325px;
+	margin: 0 auto 3rem auto;
+}
+
+.promotional-panel .footnote {
+	text-align: center;
+	font-size: 1.2rem;
+	margin: 3rem 3rem 0 3rem;
+}
+
+@media all and ( min-width: 480px ) {
+	.promotional-panel .headline h2 {
+		width: 100%;
+	}
+}
+
+@media all and ( min-width: 768px ) {
+	section[id^="save_time"] .promotional-panel .btn {
+		position: relative;
+		bottom: -380px;
+		z-index: 1;
+		left: -380px;
+	}
+
+	
+}
+
+/***
+	Promotional Panels - Split sections
+***/
+.split-section {
+	margin: 3rem auto;
+	overflow: hidden;
+}
+
+.split-section div {
+	position: relative;
+	width: 100%;
+	padding: 0 3rem 3rem 3rem;
+}
+
+.split-section div img {
+	display: block;
+	margin: 0 auto;
+	width: 19.5rem;
+}
+
+.split-section li {
+	overflow: auto;
+	margin: 1.6rem 0;
+	padding-top: 2rem;
+	display: table;
+
+}
+
+.split-section .icon {
+	float: left;
+	color: #FFFFFF;
+	font-size: 3.2rem;
+	margin: 0 2rem 0 0;
+}
+
+.split-section li p {
+	vertical-align: middle;
+	display: table-cell;
+}
+
+@media all and ( min-width: 480px ) {
+	.split-section {
+		width: 80%;
+	}
+}
+
+@media all and ( min-width: 768px ) {
+	.split-section {
+		width: 80%;
+		margin: 6rem auto 3rem auto;
+	}
+
+	section[id^="save_time"] .split-section {
+		width: 108%;
+		margin: 6rem auto;
+	}
+
+	.split-section div {
+		position: relative;
+		width: 50%;
+	}
+
+	section[id^="save_time"] .split-section div {
+		width: 38rem;
+	}
+
+	.split-section div img {
+		float: right;
+		width: 100%;
+		max-width: 32.4rem;
+		min-width: 25.5rem;
+		margin: 0;
+	}
+
+	.split-section .split-left {
+		float: left;
+	}
+
+	.split-section .split-right {
+		float: right;
+	}
+}
+
+@media all and ( min-width: 930px ) {
+	section[id^="save_time"] .split-section {
+		width: 88%;
+	}
+}
+
+@media all and ( min-width: 1010px ) {
+	section[id^="save_time"] .split-section {
+		width: 80%;
+	}
+}
+
+/***
+	Promotional panels - Special panel classes
+***/
+section[id^="save_time"] .panel {
+	margin-bottom: -12rem;
+}
+
+@media all and ( min-width: 768px ) {
+	section[id^="save_time"] .panel {
+		margin-bottom: -15rem;
+	}
+
+	section[id^="save_time"] img {
+		margin-top: -3rem;
+	}
+
+	#save_time_policyholder img {
+		margin-top: 0rem;
+	}
+}
+
+section[id^="save_worry"] .split-section div {
+	width: 30rem;
+	padding: 3rem 0 0 0;
+	overflow: auto;
+	margin: 0 auto;
+}
+
+section[id^="save_worry"] .split-section p {
+	float: left;
+	width: 168px;
+}
+
+section[id^="save_worry"] .split-section .icon {
+	float: left;
+	font-size: 6rem;
+}
+
+section[id^="save_worry"] .emphasis {
+	font-size: 3.2rem;
+}
+
+section[id^="save_worry"] #half-circle {
+	display: none;
+	width: 0; 
+	height: 0;
+}
+@media all and ( min-width: 480px ) {
+	section[id^="save_worry"] .emphasis {
+		font-size: 4.2rem;
+	}
+}
+
+@media all and ( min-width: 768px ) {
+	section[id^="save_worry"] .split-section {
+		width: 64rem;
+	}
+
+	section[id^="save_worry"] .split-section div {
+		width: 50%;
+	}
+
+	section[id^="save_worry"] #half-circle {
+		display: block;
+		margin: -15px auto 0px;
+		position: relative;
+		left: -115px;
+		margin-top: -3rem;
+		margin-bottom: 3rem;
+		width: 465px; 
+		height: 175px;
+	}
+}
+
+
+/***
+	End promotional panels sections
+***********************/
+
+#doubleClick {
+	display: none;
+}

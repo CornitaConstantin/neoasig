@@ -1,0 +1,30 @@
+-- MENU --
+
+o Asigurare Auto
+<a href="rca/">
+<a href="carte-verde/">
+<a href="casco/">
+<a href="csm/">
+
+o Asigurarea Incarcaturilor
+<a href="cargo/">
+<a href="asigurarea-bagajului/">
+
+o Asigurarea Bunurilor
+<a href="tab1/">
+<a href="tab2/">
+
+o Asigurare Medicala
+<a href="asigurare-medicala/">
+
+o Informatii
+	o Informatii utile
+	<a href="info/">
+	o Despre Noi
+	<a href="despre-noi/">
+	o Contacteaza-ne
+	<a href="contacteaza-ne/">
+
+<a href="sitemap/">
+
+Bulevardul Grigore Vieru 9, oficiul 109

@@ -1,0 +1,73 @@
+/* ------------------------------------------ */
+
+
+/*             TABLE OF CONTENTS
+/* ------------------------------------------ */
+
+
+/*  about us  */
+
+
+/*  Animation & Keyframes   */
+
+
+/* --- general --------------------- */
+
+body {
+    background: #f3f3f5;
+}
+
+.warp {
+    background: #fff;
+    padding: 30px;
+}
+
+
+/*******************************************************************
+                       start contact us
+*********************************************************************/
+
+.contact-us {
+    padding-bottom: 0
+}
+
+.contact-us .block-title {
+    margin-bottom: 40px;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #EDEDED;
+    outline: none;
+    position: relative
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #EDEDED;
+    height: 175px;
+    resize: none;
+    margin-bottom: 10px;
+    outline: none
+}
+
+#map {
+    max-width: 100%;
+    height: 300px;
+    margin-top: 70px;
+}
+
+@media all and ( min-width: 650px) {
+    .contact-details {
+        padding-left: 10rem;
+        margin-top: 6rem;
+    }
+}
+
+
+/*******************************************************************
+                        end  contact us
+*********************************************************************/
